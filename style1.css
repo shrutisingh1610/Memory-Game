@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+body {
+  height: 100vh;
+  background-color: rgb(66, 66, 66);
+  /* display: flex; */
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+  color: #d5dee2;
+}
+
+.score-panel .stars {
+  margin: 0px;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  color: orange;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .timer {
+  display: inline;
+  position: absolute;
+  left: 56%;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+.memory-game {
+  margin: auto; /* auto in child and flex in parent div ko middle mein lata hai */
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.memory-card {
+  width: 23%;
+  /* height:calc(23%-10px); */
+  height: 23%;
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+
+.memory-card:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in-out;
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+img {
+  width: 100px;
+}
+.frontface,
+.backface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #807f7f;
+  backface-visibility: hidden;
+  /* every html elemet has a back face of itself that is a mirror image so we say back-visibility-hidden" */
+}
+
+.frontface {
+  transform: rotateY(
+    180deg
+  ); /*isko rotate keya hai jaise iska frontface dekh sake */
+}
+
+.button {
+  position: absolute;
+  left: 70px;
+  height: 40px;
+  width: 80px;
+  top: 500px;
+  background-color: goldenrod;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration-style: wavy;
+}
+
+.final-score.modal {
+  position: absolute;
+  /* top: 47%; */
+  width: 340px;
+  min-height: 300px;
+  color: #d5dee2;
+  background: linear-gradient(160deg, #7494b3 0%, #1b8edc 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: none;
+  z-index: 2;
+}
+
+.final-score.modal h1 {
+  text-align: center;
+}
+
+.final-score.modal .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.final-score.modal .play-again {
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.final-score.modal .fa.fa-times {
+  cursor: pointer;
+}
+
+.final-score.modal .modal-stars {
+  color: #f5ce67;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 1.5em 0;
+}
+
+.final-score.modal p.comment {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0em 0 -0.6em 0;
+}
+
+.final-score.modal .fa.fa-star {
+  margin: 0.2em;
+  font-size: x-large;
+}
+
+.final-score.modal p {
+  text-align: center;
+}
+
+.backdrop {
+  display: none;
+  width: 100%;
+}
+
+.backdrop-show {
+  display: block;
+  position: absolute;
+  background: rgba(46, 61, 73, 0.1);
+  z-index: 1;
+}

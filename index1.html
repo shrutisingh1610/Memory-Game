@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="game2.jpg" sizes="16x16" type="image/png" />
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style1.css"/>
+    <link rel="stylesheet" href="index1.js"/>
+
+    <title>MemoryGame</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color: white">Memory Game</h1>
+      <section class="score-panel">
+        <ul class="stars">
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+        </ul>
+
+        <span class="moves">0</span><span> Moves</span>
+
+        <div class="timer">
+          <span class="minutes">00</span>:<span class="seconds">00</span>
+        </div>
+
+        <div class="restart">
+          <i class="fa fa-repeat"></i>
+        </div>
+      </section>
+      <section class="memory-game">
+        <div class="memory-card" data-image="evilface">
+          <img class="frontface" src="evilface.png" alt="evilface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="evilface">
+          <img class="frontface" src="evilface.png" alt="evilface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="angryface">
+          <img class="frontface" src="angryface.png" alt="angryface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="angryface">
+          <img class="frontface" src="angryface.png" alt="angryface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="coke">
+          <img class="frontface" src="thinkingface.png" alt="thinkingface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="coke">
+          <img class="frontface" src="thinkingface.png" alt="thinkingface"/>
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="coolface">
+          <img class="frontface" src="coolface.png" alt="coolface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="coolface">
+          <img class="frontface" src="coolface.png" alt="coolface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="feverface">
+          <img class="frontface" src="feverface.png" alt="feverface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="feverface">
+          <img class="frontface" src="feverface.png" alt="feverface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="freezeface">
+          <img class="frontface" src="freezeface.png" alt="freezeface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="freezeface">
+          <img class="frontface" src="freezeface.png" alt="freezeface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="mindblownface">
+          <img class="frontface" src="mindblownface.png" alt="mindblownface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="mindblownface">
+          <img class="frontface" src="mindblownface.png" alt="minblownface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="sneezeface">
+          <img class="frontface" src="sneezeface.png" alt="sneezeface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+        <div class="memory-card" data-image="sneezeface">
+          <img class="frontface" src="sneezeface.png" alt="snezzeface" />
+          <img src="game2.jpg" alt="g2" class="backface" />
+        </div>
+      </section>
+
+      <section class="final-score modal">
+        <span class="controls">
+          <span class="play-again">Play again</span>
+          <i class="fa fa-times close"></i>
+        </span>
+        <h1>Score</h1>
+        <p class="comment"></p>
+        <ul class="modal-stars">
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+          <li><i class="fa fa-star"></i></li>
+        </ul>
+        <p>You matched all cards in <span id="total-time">0</span>.</p>
+      </section>
+    </div>
+    <script src="index1.js"></script>
+  </body>
+</html>
